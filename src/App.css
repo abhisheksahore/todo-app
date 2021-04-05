@@ -1,38 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 5rem 0rem;
+}
+
+.add-btn, .todo-list-container {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.add-btn {
+  background-color: green;
+  padding: 1.5rem 2.5rem;
   text-align: center;
+  color: white;
+  font-weight: 800;
+  font-size: 1.75rem;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-btn:hover {
+  background-color: rgb(0, 73, 0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-list-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: rgb(194, 194, 194);
+  padding: 1rem;
+  row-gap: 1rem;
+}
+
+.list-item {
+  /* margin: 1rem; */
+  background-color: white;
+  width: 95%;
+  /* height: 50px; */
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+}
+
+.list-item label {
+  display: flex;
+  align-items: center;
+}
+
+.list-item span {
+  margin-left: 1rem;
+}
+
+
+.delete-btn {
+  padding: .5rem 1.2rem;
+  background-color: tomato;
+  border-radius:5px;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-btn:hover {
+  background-color: rgb(255, 77, 45);
 }
